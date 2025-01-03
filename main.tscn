@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwbqrgankvkco"]
+
+[ext_resource type="Texture2D" uid="uid://c6snfuooesadp" path="res://images/enemyFlyingAlt_1.png" id="1_c1xtt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="EnemyFlyingAlt1" type="Sprite2D" parent="."]
+position = Vector2(516, 319)
+texture = ExtResource("1_c1xtt")
