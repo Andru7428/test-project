@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyrktbyf8htdx"
-path="res://.godot/imported/enemySwimming_2.png-d36064ab40763437dc27cc114b15ebd3.ctex"
+uid="uid://idlv1seo5xc1"
+path="res://.godot/imported/Падение_1.png-ea315ee8a5cce1f31857f2ae42e506fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemySwimming_2.png"
-dest_files=["res://.godot/imported/enemySwimming_2.png-d36064ab40763437dc27cc114b15ebd3.ctex"]
+source_file="res://images/Котик/Падение_1.png"
+dest_files=["res://.godot/imported/Падение_1.png-ea315ee8a5cce1f31857f2ae42e506fb.ctex"]
 
 [params]
 

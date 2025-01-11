@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6snfuooesadp"
-path="res://.godot/imported/enemyFlyingAlt_1.png-32f1e60b19012d4cefc3af9079067b6d.ctex"
+uid="uid://d3hwg0j7tpgxd"
+path="res://.godot/imported/Ходь_2.png-242889f6ce539a2c531991696217a9ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemyFlyingAlt_1.png"
-dest_files=["res://.godot/imported/enemyFlyingAlt_1.png-32f1e60b19012d4cefc3af9079067b6d.ctex"]
+source_file="res://images/Котик/Ходь_2.png"
+dest_files=["res://.godot/imported/Ходь_2.png-242889f6ce539a2c531991696217a9ee.ctex"]
 
 [params]
 
