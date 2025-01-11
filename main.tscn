@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwbqrgankvkco"]
+[gd_scene load_steps=3 format=3 uid="uid://cwbqrgankvkco"]
 
-[ext_resource type="Texture2D" uid="uid://c6snfuooesadp" path="res://images/enemyFlyingAlt_1.png" id="1_c1xtt"]
+[ext_resource type="PackedScene" uid="uid://biv0gvjue56pb" path="res://platform.tscn" id="1_ypwe6"]
+[ext_resource type="PackedScene" uid="uid://cjmunbdtkwmaa" path="res://player.tscn" id="2_cpph7"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node"]
 
-[node name="EnemyFlyingAlt1" type="Sprite2D" parent="."]
-position = Vector2(516, 319)
-texture = ExtResource("1_c1xtt")
+[node name="Player" parent="." instance=ExtResource("2_cpph7")]
+position = Vector2(650, 467)
+scale = Vector2(0.4, 0.4)
+speed = 400.0
+jump_velocity = 800.0
+
+[node name="Platform" parent="." instance=ExtResource("1_ypwe6")]
+position = Vector2(573, 600)
+scale = Vector2(1.03035, 1.08336)
+
+[node name="Platform2" parent="." instance=ExtResource("1_ypwe6")]
+position = Vector2(885, 444)
+scale = Vector2(0.24, 1)
+
+[node name="Platform3" parent="." instance=ExtResource("1_ypwe6")]
+position = Vector2(414, 385)
+scale = Vector2(0.24, 1)

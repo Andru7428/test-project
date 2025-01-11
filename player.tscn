@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://cjmunbdtkwmaa"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_kwy4o"]
+[ext_resource type="Texture2D" uid="uid://idlv1seo5xc1" path="res://images/Котик/Падение_1.png" id="2_rgbgl"]
+[ext_resource type="Texture2D" uid="uid://cysc10u3f8ar3" path="res://images/Котик/Стоит.png" id="3_706ig"]
+[ext_resource type="Texture2D" uid="uid://cdmcg0fgmffcy" path="res://images/Котик/Ходь_1.png" id="3_cyrr5"]
+[ext_resource type="Texture2D" uid="uid://d3hwg0j7tpgxd" path="res://images/Котик/Ходь_2.png" id="4_kwll7"]
+[ext_resource type="Texture2D" uid="uid://bsnyuabqsuobc" path="res://images/Котик/Ходь_3.png" id="5_132q2"]
+[ext_resource type="Texture2D" uid="uid://s1dv4uh7mh2y" path="res://images/Котик/Ходь_4.png" id="6_qq37v"]
+[ext_resource type="Texture2D" uid="uid://ip26j8q7pvd1" path="res://images/Котик/Ходь_5.png" id="7_jepey"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyt8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rgbgl")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_706ig")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cyrr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kwll7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_132q2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qq37v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jepey")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnqq8"]
+size = Vector2(194, 395.5)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kwy4o")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qyt8j")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 0.75)
+shape = SubResource("RectangleShape2D_vnqq8")
+
+[node name="JumpBuffer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
