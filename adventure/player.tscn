@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bpjqgi1f84wkk"]
+
+[ext_resource type="Script" path="res://adventure/player.gd" id="1_fdqf2"]
+[ext_resource type="Texture2D" uid="uid://cysc10u3f8ar3" path="res://images/Котик/Стоит.png" id="1_gtt8d"]
+[ext_resource type="Texture2D" uid="uid://cdmcg0fgmffcy" path="res://images/Котик/Ходь_1.png" id="4_4bkqs"]
+[ext_resource type="Texture2D" uid="uid://d3hwg0j7tpgxd" path="res://images/Котик/Ходь_2.png" id="5_yvw5e"]
+[ext_resource type="Texture2D" uid="uid://bsnyuabqsuobc" path="res://images/Котик/Ходь_3.png" id="6_a0o0j"]
+[ext_resource type="Texture2D" uid="uid://s1dv4uh7mh2y" path="res://images/Котик/Ходь_4.png" id="7_5xben"]
+[ext_resource type="Texture2D" uid="uid://ip26j8q7pvd1" path="res://images/Котик/Ходь_5.png" id="8_aqw6p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyt8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gtt8d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4bkqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yvw5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a0o0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5xben")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_aqw6p")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mmxg1"]
+radius = 108.18
+height = 385.94
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_fdqf2")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qyt8j")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 0.75)
+shape = SubResource("CapsuleShape2D_mmxg1")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
