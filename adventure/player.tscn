@@ -1,42 +1,77 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpjqgi1f84wkk"]
+[gd_scene load_steps=15 format=3 uid="uid://bpjqgi1f84wkk"]
 
 [ext_resource type="Script" path="res://adventure/player.gd" id="1_fdqf2"]
-[ext_resource type="Texture2D" uid="uid://cysc10u3f8ar3" path="res://images/Котик/Стоит.png" id="1_gtt8d"]
-[ext_resource type="Texture2D" uid="uid://cdmcg0fgmffcy" path="res://images/Котик/Ходь_1.png" id="4_4bkqs"]
-[ext_resource type="Texture2D" uid="uid://d3hwg0j7tpgxd" path="res://images/Котик/Ходь_2.png" id="5_yvw5e"]
-[ext_resource type="Texture2D" uid="uid://bsnyuabqsuobc" path="res://images/Котик/Ходь_3.png" id="6_a0o0j"]
-[ext_resource type="Texture2D" uid="uid://s1dv4uh7mh2y" path="res://images/Котик/Ходь_4.png" id="7_5xben"]
-[ext_resource type="Texture2D" uid="uid://ip26j8q7pvd1" path="res://images/Котик/Ходь_5.png" id="8_aqw6p"]
+[ext_resource type="Texture2D" uid="uid://b8nwq5p0sppsd" path="res://images/Второй_котик/Стоит_перед.png" id="2_p7s0b"]
+[ext_resource type="Texture2D" uid="uid://fbhe8tv0m1if" path="res://images/Второй_котик/Стоит_боком.png" id="3_yq52f"]
+[ext_resource type="Texture2D" uid="uid://ref3jxas35qe" path="res://images/Второй_котик/Стоит_спиной.png" id="4_vhfa3"]
+[ext_resource type="Texture2D" uid="uid://bkse0tmtfgwcb" path="res://images/Второй_котик/Идёт_перед_1.png" id="5_4alyc"]
+[ext_resource type="Texture2D" uid="uid://dfutgk07o7dkt" path="res://images/Второй_котик/Идёт_перед_2.png" id="6_3kuii"]
+[ext_resource type="Texture2D" uid="uid://bt2e28tyoa04" path="res://images/Второй_котик/Идёт_перед_3.png" id="7_ey6js"]
+[ext_resource type="Texture2D" uid="uid://drwqhikql1jjm" path="res://images/Второй_котик/Идёт_перед_4.png" id="8_ttspj"]
+[ext_resource type="Texture2D" uid="uid://bbom6tl8k4dmq" path="res://images/Второй_котик/Идёт_боком_1.png" id="9_w5lsj"]
+[ext_resource type="Texture2D" uid="uid://cij671yjclfi5" path="res://images/Второй_котик/Идёт_боком_2.png" id="10_gusnl"]
+[ext_resource type="Texture2D" uid="uid://bd2fuspjqcvuj" path="res://images/Второй_котик/Идёт_боком_3.png" id="11_pr1k4"]
+[ext_resource type="Texture2D" uid="uid://ddywo023u0ttw" path="res://images/Второй_котик/Идёт_боком_4.png" id="12_jlqpn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qyt8j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_gtt8d")
+"texture": ExtResource("2_p7s0b")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle_down",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_4bkqs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_yvw5e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_a0o0j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_5xben")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_aqw6p")
+"texture": ExtResource("3_yq52f")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"idle_sides",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vhfa3")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4alyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3kuii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ey6js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ttspj")
+}],
+"loop": true,
+"name": &"walk_down",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_w5lsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gusnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pr1k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jlqpn")
+}],
+"loop": true,
+"name": &"walk_sides",
+"speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mmxg1"]
@@ -48,9 +83,10 @@ script = ExtResource("1_fdqf2")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qyt8j")
-animation = &"idle"
+animation = &"idle_sides"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(12, 0.75)
 shape = SubResource("CapsuleShape2D_mmxg1")
 
