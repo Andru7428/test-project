@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cjmunbdtkwmaa"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_kwy4o"]
+[ext_resource type="Script" path="res://platformer/player.gd" id="1_kwy4o"]
 [ext_resource type="Texture2D" uid="uid://idlv1seo5xc1" path="res://images/Котик/Падение_1.png" id="2_rgbgl"]
 [ext_resource type="Texture2D" uid="uid://cysc10u3f8ar3" path="res://images/Котик/Стоит.png" id="3_706ig"]
 [ext_resource type="Texture2D" uid="uid://cdmcg0fgmffcy" path="res://images/Котик/Ходь_1.png" id="3_cyrr5"]
