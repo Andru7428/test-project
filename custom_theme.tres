@@ -1,0 +1,73 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cw8bqpybbsxlu"]
+
+[ext_resource type="FontFile" uid="uid://fbv0qgifywm1" path="res://fonts/IntroFriday.ttf" id="1_re61k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ig2lf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2bfy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1932, 0.33684, 0.42, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dihy7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhu5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmgos"]
+
+[resource]
+GameTitle/base_type = &"Label"
+GameTitle/colors/font_color = Color(1, 1, 1, 1)
+GameTitle/colors/font_outline_color = Color(0, 0, 0, 1)
+GameTitle/colors/font_shadow_color = Color(0, 0, 0, 1)
+GameTitle/constants/line_spacing = 0
+GameTitle/constants/outline_size = 0
+GameTitle/constants/shadow_offset_x = 0
+GameTitle/constants/shadow_offset_y = 0
+GameTitle/constants/shadow_outline_size = 0
+GameTitle/font_sizes/font_size = 60
+GameTitle/fonts/font = ExtResource("1_re61k")
+GameTitle/styles/normal = SubResource("StyleBoxEmpty_ig2lf")
+MainMenuButton/base_type = &"Button"
+MainMenuButton/colors/font_color = Color(1, 1, 1, 1)
+MainMenuButton/colors/font_disabled_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/font_focus_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/font_hover_color = Color(0.172115, 0.172115, 0.172115, 1)
+MainMenuButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/font_outline_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/icon_disabled_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/icon_focus_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/icon_hover_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/icon_normal_color = Color(0, 0, 0, 1)
+MainMenuButton/colors/icon_pressed_color = Color(0, 0, 0, 1)
+MainMenuButton/constants/align_to_largest_stylebox = 0
+MainMenuButton/constants/h_separation = 0
+MainMenuButton/constants/icon_max_width = 0
+MainMenuButton/constants/outline_size = 0
+MainMenuButton/font_sizes/font_size = 30
+MainMenuButton/fonts/font = ExtResource("1_re61k")
+MainMenuButton/styles/disabled = SubResource("StyleBoxFlat_m2bfy")
+MainMenuButton/styles/focus = SubResource("StyleBoxFlat_m2bfy")
+MainMenuButton/styles/hover = SubResource("StyleBoxEmpty_dihy7")
+MainMenuButton/styles/normal = SubResource("StyleBoxEmpty_uhu5a")
+MainMenuButton/styles/pressed = SubResource("StyleBoxEmpty_tmgos")
+MenuPanel/base_type = &"PanelContainer"
+MenuPanel/styles/panel = SubResource("StyleBoxFlat_m2bfy")
+SettingsTitle/base_type = &"Label"
+SettingsTitle/constants/line_spacing = 0
+SettingsTitle/constants/outline_size = 0
+SettingsTitle/constants/shadow_offset_x = 0
+SettingsTitle/constants/shadow_offset_y = 0
+SettingsTitle/constants/shadow_outline_size = 0
+SettingsTitle/font_sizes/font_size = 18
+SettingsTitle/fonts/font = ExtResource("1_re61k")
+SettingsTitle/styles/normal = SubResource("StyleBoxFlat_m2bfy")

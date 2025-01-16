@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ckt3kfefosapg"]
+
+[node name="InputBinding" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 33.0
+grow_horizontal = 2
+
+[node name="InputButton" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="ActionLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Action
+"
+vertical_alignment = 1
+
+[node name="InputLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Input
+"
+horizontal_alignment = 2
+vertical_alignment = 1
